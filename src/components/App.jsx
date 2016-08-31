@@ -14,41 +14,46 @@ export default React.createClass({
     }
   },
   componentDidMount: function() {
+    console.log('ready!')
     // Code for initial mount goes here
-    this.lock = new Auth0Lock('a2fICjgon77eKU58wBrqLv3A99rFgKuI', 'gtwebdev.auth0.com', {
+    /* this.lock = new Auth0Lock('a2fICjgon77eKU58wBrqLv3A99rFgKuI', 'gtwebdev.auth0.com', {
       auth: {
         params: {scope: 'openid email profile'},
       }
     });
-    this.lock.on('authenticated', this._doAuthentication);
+    this.lock.on('authenticated', this._doAuthentication); */
   },
   _doAuthentication(authResult){
-    console.log(authResult);
+    /* console.log(authResult);
     this.setState({
       token: authResult.idToken,
       name: authResult.idTokenPayload.nickname,
       email: authResult.idTokenPayload.email,
       picture: authResult.idTokenPayload.picture,
       gender: authResult.idTokenPayload.gender
-    })
+    }) */
   },
   login: function() {
-    this.lock.show();
+    console.log('login');
+    // this.lock.show();
   },
   signup: function() {
-    this.lock.show({ initialScreen: 'signUp' });
+    console.log('signup');
+    // this.lock.show({ initialScreen: 'signUp' });
   },
   logout: function() {
-    this.setState({
+    console.log('logout');
+    /*this.setState({
       token: null,
       name: null,
       email: null,
       picture: null,
       gender: null
-    })
+    }) */
   },
   ping: function() {
-    request.get('/authInfo')
+    console.log('ping');
+    /*request.get('/authInfo')
       .set('authorization', 'Bearer ' + this.state.token)
       .end((err, res) => {
         if (err) {
@@ -56,7 +61,7 @@ export default React.createClass({
         } else {
           alert(JSON.stringify(res));
         }
-      });
+      });*/
   },
   render: function() {
     return (
