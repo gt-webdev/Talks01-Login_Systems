@@ -7,8 +7,8 @@ export default function startServer() {
 	const server = express();
 	/*const jwt = require('express-jwt');
 	const jwtCheck = jwt({
-	  secret: new Buffer('NyZslmktWfh_etsDfQGs0rYw-Rf41R5-obYDZjGHlOblqPLjxS5L0-yGiB_6fTDz', 'base64'),
-	  audience: 'a2fICjgon77eKU58wBrqLv3A99rFgKuI'
+	  secret: new Buffer('CLIENT_SECRET', 'base64'),
+	  audience: 'CLIENT_ID'
 	});*/
 
   server.get('/', (req, res) => {

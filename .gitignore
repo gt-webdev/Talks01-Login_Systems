@@ -1,3 +1,4 @@
+node_modules
 *.swp
 dist/bundle.js
 .tmp
@@ -7,7 +8,7 @@ dist/bundle.js
 ######################
 *.log
 *.out
- 
+
 # OS generated files #
 ######################
 .DS_Store

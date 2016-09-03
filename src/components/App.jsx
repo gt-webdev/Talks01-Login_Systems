@@ -16,7 +16,7 @@ export default React.createClass({
   componentDidMount: function() {
     console.log('ready!')
     // Code for initial mount goes here
-    /* this.lock = new Auth0Lock('a2fICjgon77eKU58wBrqLv3A99rFgKuI', 'gtwebdev.auth0.com', {
+    /* this.lock = new Auth0Lock('CLIENT_ID', 'DOMAIN', {
       auth: {
         params: {scope: 'openid email profile'},
       }
